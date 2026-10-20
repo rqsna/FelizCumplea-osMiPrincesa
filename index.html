@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi niña 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  color: #8d365e;
+  background:
+    radial-gradient(ellipse at 15% 20%, #ffffffc9 0 3px, transparent 5px),
+    radial-gradient(ellipse at 85% 75%, #ffffffbd 0 4px, transparent 6px),
+    linear-gradient(135deg, #ffc9df, #fff0f6, #ffb9d7);
+  background-size: 75px 75px, 95px 95px, 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 14px;
+  overflow-x: hidden;
+}
+
+.decor {
+  position: fixed;
+  font-size: 32px;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: float 4s ease-in-out infinite;
+}
+
+.d1 { top: 5%; left: 7%; }
+.d2 { top: 12%; right: 8%; animation-delay: 1s; }
+.d3 { bottom: 8%; left: 9%; animation-delay: 2s; }
+.d4 { bottom: 10%; right: 8%; animation-delay: 1.5s; }
+
+@keyframes float {
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.card {
+  width: 100%;
+  max-width: 570px;
+  padding: 30px 23px;
+  text-align: center;
+  background: #ffffffdf;
+  border: 3px solid white;
+  border-radius: 30px;
+  box-shadow: 0 12px 40px #c9578b35;
+  position: relative;
+  z-index: 1;
+}
+
+.bow {
+  font-size: 54px;
+  line-height: 1.3;
+}
+
+.kitty {
+  font-size: 65px;
+  margin: 8px 0;
+}
+
+h1 {
+  font-size: clamp(27px, 6vw, 38px);
+  color: #d94f91;
+  margin: 12px 0;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.9;
+  white-space: pre-line;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, #f58bb8, #e65a9b);
+  color: white;
+  font-family: inherit;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #d94f9140;
+  transition: transform .2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  background: #fff1f7;
+  border: 2px dashed #f2a2c5;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 22px;
+  animation: appear .7s ease;
+}
+
+#letter h2 {
+  text-align: center;
+  color: #d94f91;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.signature {
+  text-align: center;
+  color: #d94f91;
+  font-size: 20px;
+}
+
+.small {
+  font-size: 13px;
+  opacity: .8;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="decor d1">🎀</div>
+<div class="decor d2">💗</div>
+<div class="decor d3">🌸</div>
+<div class="decor d4">🎀</div>
+
+<main class="card">
+
+  <div class="bow">🎀</div>
+  <div class="kitty">🐱</div>
+
+  <h1 id="heading"></h1>
+  <p id="subtitle"></p>
+
+  <button id="enterButton" onclick="enterSite()">
+    Presiona para entrar 💗
+  </button>
+
+  <section id="letter">
+    <h2 id="letterHeading"></h2>
+    <p id="letterText"></p>
+    <p class="signature" id="signoff"></p>
+  </section>
+
+  <p class="small">Hecho con muchísimo amor 💕</p>
+
+</main>
+
+<script>
+/* =====================================
+   🎀 CUSTOMIZE EVERYTHING HERE 🎀
+
+   Change the words INSIDE "QUOTATION MARKS".
+   Keep the quotation marks in place.
+   ===================================== */
+
+const CONFIG = {
+
+  titulo: "Feliz cumpleaños, mi niña 💗",
+
+  subtitulo: "Tengo algo especial para ti... 🎀",
+
+  textoBoton: "💗",
+
+  tituloCarta: "Para la niña más especial 💌",
+
+  
+  mensaje: `feliz cumpleaños mi princesa hermosa espero que hoy tengas un día muy bonito porque te mereces todo lo lindo de este mundo me hace muy feliz poder estar contigo y compartir otro momento tan especial de tu vida aunque no esté ahí en persona quiero que sepas que eres una personita muy importante para mí y que me encanta tenerte en mi vida quiero seguir acompañándote en tus cumpleaños y estar ahí para verte cumplir todas tus metas gracias por llegar a mi vida y hacerme sentir cosas tan bonitas que nunca había sentido con nadie te deseo muchísima felicidad mi niña y espero que nunca te falten razones para sonreír te amo demasiado mi niña hermosa y ojalá pudiera estar contigo hoy para darte muchos abrazos y hacerte sentir lo mucho que te amo feliz cumpleaños mi amor
+
+estos 5 meses contigo han sido algo muy bonito para mí y la verdad me pone feliz pensar en todo lo que hemos vivido juntos me gusta recordar nuestras llamadas nuestras risas las veces que jugamos y hasta esos momentos donde no hacemos nada pero igual me gusta estar contigo poco a poco te has vuelto alguien demasiado especial para mí y cada día encuentro más razones para amarte me gusta poder decir que eres mi niña y que tengo a alguien como tú en mi vida nunca pensé que iba a llegar a amar tanto a una personita como te amo a ti y me hace feliz saber que estos 5 meses son apenas el comienzo de muchas cosas bonitas que quiero vivir contigo quiero seguir conociéndote seguir aprendiendo de ti y crear muchos más recuerdos que algún día podamos recordar juntos gracias por hacerme tan feliz y por ser parte de mi vida mi amor no sabes lo bonito que se siente tenerte conmigo y espero poder seguir celebrando muchos meses y cumpleaños a tu lado porque de verdad eres una de las cosas más lindas que me han pasado te amo muchísimo mi princesa 💗`,
+
+
+  despedida: "Te quiero muchísimo, mi niña. 💗🎀"
+
+};
+
+/* =====================================
+   NO NEED TO EDIT BELOW HERE
+   ===================================== */
+
+document.getElementById("heading").textContent =
+  CONFIG.titulo;
+
+document.getElementById("subtitle").textContent =
+  CONFIG.subtitulo;
+
+document.getElementById("enterButton").textContent =
+  CONFIG.textoBoton;
+
+document.getElementById("letterHeading").textContent =
+  CONFIG.tituloCarta;
+
+document.getElementById("letterText").textContent =
+  CONFIG.mensaje;
+
+document.getElementById("signoff").textContent =
+  CONFIG.despedida;
+
+function enterSite() {
+  document.getElementById("enterButton").classList.add("hidden");
+  document.getElementById("subtitle").classList.add("hidden");
+
+  document.getElementById("letter").style.display = "block";
+
+  document.getElementById("heading").textContent =
+    CONFIG.titulo;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+</script>
+
+</body>
+</html>
